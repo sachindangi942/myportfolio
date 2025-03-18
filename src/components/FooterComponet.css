@@ -1,0 +1,34 @@
+/* Footer.css */
+.footer {
+    position: fixed; /* Footer ko page ke bottom par fixed kare */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure footer stays on top of other content */
+    background-color: #f8f9fa; /* Light background color */
+    border-top: 1px solid #e9ecef; /* Optional: Add a border on top */
+  }
+
+
+  .footer {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+  }
+  
+  .footer a {
+    color: white; /* White links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer a:hover {
+    color: #007bff; /* Blue color on hover */
+  }
+  
+  .footer ul {
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  .footer ul li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+  }

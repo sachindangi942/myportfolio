@@ -1,0 +1,68 @@
+/* NavbarComponent.css */
+.custom-layout {
+    display: flex;
+    min-height: 100vh; /* Full height */
+  }
+  
+  .portfolio-side {
+    width: 200px; /* Fixed width for the left side */
+    background-color: #343a40; /* Dark background */
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start; /* Align brand to the top */
+    justify-content: center;
+  }
+  
+  .portfolio-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white; /* Text color */
+    text-align: center;
+  }
+  
+  .navigation-side {
+    flex: 1; /* Take remaining space */
+    background-color: #f8f9fa; /* Light background for navigation */
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    color: #343a40; /* Dark text color */
+  }
+  
+  @media (max-width: 991.98px) {
+    .custom-layout {
+      flex-direction: column; /* Stack layout on mobile */
+    }
+  
+    .portfolio-side {
+      width: 100%; /* Full width on mobile */
+      padding: 0.5rem;
+    }
+  
+    .navigation-side {
+      width: 100%; /* Full width on mobile */
+    }
+  
+    .navbar-collapse {
+      background-color: #f8f9fa; /* Light background for mobile view */
+      padding: 1rem;
+      border-radius: 0.25rem;
+      margin-top: 0.5rem;
+    }
+  
+    .nav-link {
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
