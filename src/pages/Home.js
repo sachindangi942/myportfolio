@@ -9,9 +9,10 @@ import Skills from "../components/Skills";
 import Qualification from "./Qualification";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import { Button } from "antd"
-import {MailOutlined} from "@ant-design/icons"
+import { Button } from "antd";
+import { MailOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -20,7 +21,7 @@ const textVariants = {
 export const Home = () => {
     const navigate = useNavigate();
     return (
-        <Container className="py-5 ">
+        <Container className="py-5">
             <Row className="text-center mb-5">
                 <Col>
                     <motion.h1
@@ -44,7 +45,7 @@ export const Home = () => {
             <Row className="align-items-center">
                 <Col
                     md={1}
-                    className="d-flex flex-column align-items-center justify-content-center gap-4 position-fixed start-0 top-50 translate-middle-y"
+                    className="d-flex flex-column align-items-center justify-content-center gap-4 position-fixed start-0 top-50 translate-middle-y d-none d-md-flex"
                 >
                     <a
                         href="https://www.linkedin.com/in/sachin-s1a2c3hin"
@@ -88,7 +89,7 @@ export const Home = () => {
                                 icon={<MailOutlined />}
                                 size="large"
                                 className="modern-button"
-                                onClick={()=> navigate("/contact")}
+                                onClick={() => navigate("/contact")}
                             >
                                 Contact Me
                             </Button>
