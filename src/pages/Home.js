@@ -44,7 +44,7 @@ export const Home = () => {
             <Row className="align-items-center">
                 <Col
                     md={1}
-                    className="d-flex flex-column align-items-center justify-content-center gap-4 position-fixed start-0 top-50 translate-middle-y"
+                    className="d-flex flex-column align-items-center justify-content-center gap-4 start-0 top-50 translate-middle-y"
                 >
                     <a
                         href="https://www.linkedin.com/in/sachin-s1a2c3hin"

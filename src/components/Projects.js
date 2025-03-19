@@ -31,7 +31,7 @@ A powerful and scalable full-stack e-commerce platform`,
     title: "Portfolio Website",
     description: "A modern portfolio showcasing my skills, projects, and experience.",
     technologies: ["React.js", "Bootstrap", "CSS"],
-    liveLink: "https://sachindangi.com",
+    liveLink: "https://main.d3sbo7dtyqrczp.amplifyapp.com",
     githubLink: "https://github.com/sachindangi942/myportfolio.git",
   },
 ];
