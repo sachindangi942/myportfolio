@@ -13,12 +13,12 @@ A powerful and scalable full-stack e-commerce platform`,
     githubLink: "https://github.com/sachindangi942/E-com-web.git",
   },
   {
-    title: "E-Commerce Website",
+    title: "E-Com. Admin Penal",
     description: `E-Commerce Website 
-A powerful and scalable full-stack e-commerce platform`,
+A powerful and scalable full-stack e-commerce Admin Penal`,
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
     liveLink: "https://your-restaurant-app.com",
-    githubLink: "https://github.com/sachindangi942/E-com-web.git",
+    githubLink: "https://github.com/sachindangi942/E-com-web-admin.git",
   },
   {
     title: "User Registration System",
