@@ -66,3 +66,47 @@
       margin-bottom: 0.5rem;
     }
   }
+
+  body {
+    padding-top: 56px; /* Adjust this value based on your navbar height */
+  }
+
+
+
+
+
+
+  /* index.css या App.css में जोड़ें */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .bg-light {
+  background-color: #1e1e1e !important;
+}
+
+
+
+/* केवल बेसिक स्टाइलिंग के लिए */
+body.dark-mode {
+  background-color: #141414;
+}
+
+body.light-mode {
+  background-color: #f5f5f5;
+}
+
+/* Ant Design स्विच के लिए कस्टम स्टाइल */
+.ant-switch {
+  background-color: #8c8c8c;
+}
+
+.ant-switch-checked {
+  background-color: #1890ff;
+}

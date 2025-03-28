@@ -15,24 +15,24 @@ import { useNavigate } from "react-router-dom";
 
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-        opacity: 1, 
-        y: 0, 
-        transition: { duration: 1.2, ease: "easeOut" } 
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1.2, ease: "easeOut" }
     },
 };
 
 const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
-        opacity: 1, 
-        transition: { staggerChildren: 0.3 } 
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.3 }
     },
 };
 
 export const Home = () => {
     const navigate = useNavigate();
-    
+
     return (
         <Container className="py-5">
             <Row className="text-center mb-5">
@@ -72,11 +72,12 @@ export const Home = () => {
                     </a>
                 </Col>
 
-                <Col md={{ span: 7, offset: 2 }} className="text-center">
+                <Col md={{ span: 7, offset: 2 }} className="text-center ">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: -10 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
+                        // style={{ marginTop: "-200px" }}
                     >
                         <h1 className="fw-bold">Hi, I'm Sachin Dangi</h1>
                         <TypedText />
@@ -97,15 +98,22 @@ export const Home = () => {
                     </motion.div>
                 </Col>
 
-                <Col md={3} className="text-center">
+                <Col md={3} className="text-center"
+                    style={{
+                        marginTop: "-150px",       // ऊपर उठाने के लिए
+                        position: "relative",     // पोजिशनिंग के लिए
+                        zIndex: 1,               // अन्य elements के ऊपर दिखने के लिए
+                        alignSelf: "flex-start"  // Row के top से align करने के लिए
+                    }}
+                >
                     <Image src={myImage} fluid roundedCircle className="profile-img" />
                 </Col>
             </Row>
 
-            <motion.div 
-                initial="hidden" 
-                whileInView="visible" 
-                variants={containerVariants} 
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={containerVariants}
                 viewport={{ once: true }}
             >
                 <motion.div variants={textVariants}><About /></motion.div>

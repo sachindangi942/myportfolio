@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link, useLocation } from "react-router-dom";
+import "./NavbarComponent.css"
 
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -19,7 +20,7 @@ function HeaderNav() {
 
   return (
     <motion.nav variants={navVariants} initial="hidden" animate="visible">
-      <Navbar expand="lg" className="mb- shadow-sm p-3 bg-light">
+      <Navbar fixed="top" expand="lg" className="mb-4  p-3 bg-light ">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-start">
