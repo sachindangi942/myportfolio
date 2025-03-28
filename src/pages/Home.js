@@ -102,7 +102,6 @@ export const Home = () => {
                 </Col>
             </Row>
 
-            {/* Smooth staggered animation for sections */}
             <motion.div 
                 initial="hidden" 
                 whileInView="visible" 
