@@ -167,7 +167,8 @@ import Nav from "react-bootstrap/Nav";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { theamToggle } from "../redux/fetures/TheamSlice";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { BulbOutlined, BulbFilled } from '@ant-design/icons';
+
 
 const navVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -248,7 +249,7 @@ function HeaderNav() {
                   style={{ cursor: "pointer", fontSize: "1.5rem" }}
                   title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
                 >
-                  {darkMode ? <FaSun color="#f39c12" /> : <FaMoon color="#2c3e50" />}
+                  {darkMode ? <BulbFilled/> : <BulbOutlined/>}
                 </span>
               </motion.div>
             </Nav>
