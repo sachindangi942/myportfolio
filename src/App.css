@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.dark-mode,
+.light-mode {
+  height: 100%;
+  min-height: 100%;
+  transition:
+    background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.dark-mode {
+  background-color: #121212 !important;
+  color: white !important;
+  min-height: 100vh;
+}
+
+.light-mode {
+  background-color: #ffffff !important;
+  color: black !important;
+  min-height: 100vh;
+}
+
+/* optional styling for nav, footer, etc. */
+.navbar, .footer {
+  transition: background 0.3s ease;
+}

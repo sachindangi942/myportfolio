@@ -12,6 +12,7 @@ import Contact from "../components/Contact";
 import { Button } from "antd";
 import { MailOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -22,13 +23,6 @@ const textVariants = {
     },
 };
 
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: { staggerChildren: 0.5 }
-    },
-};
 
 const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -42,6 +36,7 @@ const imageVariants = {
 
 export const Home = () => {
     const navigate = useNavigate();
+    const {darkMode} = useSelector(state=>state.theam)
 
     return (
         <Container className="py-5">
@@ -72,7 +67,7 @@ export const Home = () => {
                         <FaLinkedin size={30} color="#0077b5" />
                     </motion.a>
                     <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/sachindangi942" target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={30} color="black" />
+                        <FaGithub size={30} className={darkMode ? "text-white" : "text-dark"} />
                     </motion.a>
                     <motion.a whileHover={{ scale: 1.2 }} href="https://wa.me/8463088388" target="_blank" rel="noopener noreferrer">
                         <FaWhatsapp size={30} color="#25D366" />
@@ -114,19 +109,12 @@ export const Home = () => {
                     </motion.div>
                 </Col>
             </Row>
+            <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}><About /></motion.div>
+            <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Skills /></motion.div>
+            <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Qualification /></motion.div>
+            <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Projects /></motion.div>
+            <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Contact /></motion.div>
 
-            <motion.div
-                initial="hidden"
-                whileInView="visible"
-                variants={containerVariants}
-                viewport={{ once: true }}
-            >
-                <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><About /></motion.div>
-                <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Skills /></motion.div>
-                <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Qualification /></motion.div>
-                <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Projects /></motion.div>
-                <motion.div variants={textVariants} whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}><Contact /></motion.div>
-            </motion.div>
         </Container>
     );
 };

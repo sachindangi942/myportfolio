@@ -2,13 +2,18 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-import {  Menu } from "antd";
+import { Menu } from "antd";
 
 const Footer = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
+
+  const menuItems = ["Home", "About", "Projects", "Contact"].map((item) => ({
+    key: item.toLowerCase(),
+    label: <a href={`#${item.toLowerCase()}`} className="text-white">{item}</a>,
+  }));
 
   return (
     <motion.footer
@@ -23,18 +28,20 @@ const Footer = () => {
             <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <h5>Connect with Me</h5>
               <div className="d-flex justify-content-center gap-4">
-                {[{
-                  link: "https://www.linkedin.com/in/sacin-dangi-s1a2c3hin",
-                  icon: <FaLinkedin size={30} />
-                },
-                {
-                  link: "https://github.com/sachindangi942",
-                  icon: <FaGithub size={30} />
-                },
-                {
-                  link: "mailto:sachindangi942@gmail.com",
-                  icon: <FaEnvelope size={30} />
-                }].map((item, index) => (
+                {[
+                  {
+                    link: "https://www.linkedin.com/in/sacin-dangi-s1a2c3hin",
+                    icon: <FaLinkedin size={30} />,
+                  },
+                  {
+                    link: "https://github.com/sachindangi942",
+                    icon: <FaGithub size={30} />,
+                  },
+                  {
+                    link: "mailto:sachindangi942@gmail.com",
+                    icon: <FaEnvelope size={30} />,
+                  },
+                ].map((item, index) => (
                   <motion.a
                     key={index}
                     href={item.link}
@@ -54,15 +61,13 @@ const Footer = () => {
           <Col xs={12} md={6} className="mb-3">
             <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <h5>Quick Links</h5>
-              <Menu theme="dark" mode="horizontal" selectable={false} className="justify-content-center">
-                {["Home", "About", "Projects", "Contact"].map((item, index) => (
-                  <Menu.Item key={index}>
-                    <a href={`#${item.toLowerCase()}`} className="text-white">
-                      {item}
-                    </a>
-                  </Menu.Item>
-                ))}
-              </Menu>
+              <Menu
+                theme="dark"
+                mode="horizontal"
+                selectable={false}
+                className="justify-content-center"
+                items={menuItems}
+              />
             </motion.div>
           </Col>
 
