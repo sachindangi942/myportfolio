@@ -150,11 +150,11 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <Col key={index} xs={6} md={4} lg={3} className="text-center mb-4">
               <motion.div 
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.1}}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 <Card className="p-4 shadow-sm border-0 text-center skill-card">
                   <div>{skill.icon}</div>
@@ -175,7 +175,7 @@ const Skills = () => {
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 <Card className="p-4 shadow-sm border-0 text-center skill-card">
                   <div>{tool.icon}</div>

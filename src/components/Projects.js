@@ -5,7 +5,14 @@ import { motion } from "framer-motion"; // Import Framer Motion
 
 const projects = [
   {
-    title: "E-Commerce Website",
+    title: "Cable Payment Management",
+    description: `A modern and efficient web-based application designed to manage cable TV customer records and payments seamlessly.`,
+    technologies: ["React.js", "Firebase Firestore", "Ant Design", "React-Bootstrap"],
+    liveLink: "https://main.d1uwgdkd9wy337.amplifyapp.com",
+    githubLink: "https://github.com/sachindangi942/Cable_Payment_Management",
+  },
+  {
+    title: "E-Commerce Desboard",
     description: `E-Commerce Website 
 A powerful and scalable full-stack e-commerce platform`,
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
