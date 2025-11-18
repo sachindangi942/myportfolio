@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaSchool, FaUniversity, FaGraduationCap } from "react-icons/fa";
 
+const Titilevariant = {
+  hover: { scale: 1.2, transition: { duration: 0.6 } },
+};
+
 const qualifications = [
   {
     title: "High School (10th)",
@@ -32,26 +36,28 @@ const qualifications = [
 
 const Qualification = () => {
   return (
-    <motion.section 
-      id="qualification" 
+    <motion.section
+      id="qualification"
       className="py-5 my-5"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <Container>
-        <motion.h2 
+        <motion.h2
           className="text-center fw-bold text-primary display-4 mb-5"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          My Qualifications
+          <motion.div whileHover="hover" variants={Titilevariant}>
+            My Qualifications
+          </motion.div>
         </motion.h2>
         <Row className="justify-content-center">
           {qualifications.map((qualification, index) => (
             <Col key={index} xs={12} md={6} lg={4} className="mb-4">
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}

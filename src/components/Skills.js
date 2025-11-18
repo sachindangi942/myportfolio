@@ -119,7 +119,6 @@ const tools = [
   { name: "Postman", icon: <SiPostman size={50} className="text-orange" /> },
   { name: "VS Code", icon: <FaMicrosoft size={50} className="text-primary" /> },
   { name: "AWS", icon: <FaAws size={50} className="text-warning" /> },
-  { name: "Docker", icon: <SiDocker size={50} className="text-info" /> },
   { name: "S3 Bucket", icon: <FaAws size={50} className="text-warning" /> }, // Using FaAws for S3 Bucket
   { name: "EC2", icon: <FaAws size={50} className="text-warning" /> }, // Using FaAws for EC2
   { name: "Amplify Hosting", icon: <FaAws size={50} className="text-warning" /> }, // Using FaAws for Amplify Hosting
