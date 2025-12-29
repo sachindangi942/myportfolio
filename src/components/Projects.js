@@ -16,7 +16,7 @@ const projects = [
     description: `E-Commerce Website 
 A powerful and scalable full-stack e-commerce platform`,
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    liveLink: "https://your-restaurant-app.com",
+    liveLink: "https://e-com-web-opal.vercel.app",
     githubLink: "https://github.com/sachindangi942/E-com-web.git",
   },
   {
